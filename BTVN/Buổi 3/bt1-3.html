@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(41, 46, 96);
+        }
+        .item{
+            display: flex; 
+            align-items: center; 
+            gap: 5px;
+            position: relative;
+
+        }
+        .item:hover{
+            color:darkgray;
+        
+        }
+        .hidden-item{
+            display: none;
+            position: absolute;
+            top: 30px;
+            background-color: white;
+            color: black;
+            width: max-content;
+            padding: 10px 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            z-index: 10;
+        }
+        .hidden-item h4 {
+            margin-bottom: 5px;
+            font-size: 16px;
+            color: #0d1117;
+        }
+        .hidden-item p {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: rgb(107, 105, 105);
+        }
+        .item:hover .hidden-item{
+            display:block;
+        }
+        .small-ic{
+            font-size: 12px; 
+        }
+        .input{
+            font-size: 16px;
+            display: flex;
+            flex-direction: row;
+        }
+        .input:hover{
+            color:darkgray;
+        }
+    </style>
+</head>
+<body>
+    <div style = "display: flex;align-items: center; gap: 30px; position: fixed; color: white; background-color: black; top: 0; left: 0;width: 100%; padding: 10px 20px;">
+        <i class="fab fa-github" style=" margin-left: 20px; padding: 5px 10px; border: 1px solid rgb(74, 73, 73); border-radius: 50%; background-color: white; color: black;"></i>
+        <div class = "item">
+            <p style="font-size: 18px; margin: 0;">Product</p>
+            <i class="fas fa-chevron-down small-ic" ></i>
+
+            <div class = "hidden-item">
+                <div style = "display: flex; justify-content: space-around; gap: 4px; flex-direction: row;">
+                    <div style="width: 70%; margin-right: 30px; margin-left: 20px;">
+                        <h4>GitHub Copilot</h4>
+                        <p> Write better code with AI</p>
+                        <h4>Security</h4>
+                        <p>Find anh fix vulnerabilities</p>
+                        <h4>Actions</h4>
+                        <p>Automate any workflow</p>
+                        <h4>Codespaces</h4>
+                        <p>Instant dev environments</p>
+                        <h4>Issues</h4>
+                        <p>Plan and track work</p>
+                        <h4>Code Review</h4>
+                        <p>Manage code changes</p>
+                        <h4>Discussions</h4>
+                        <p>Collaborate outside of code</p>
+                        <h4>Code Search</h4>
+                        <p>Find more, search less</p>
+                    </div>
+                    <p style = "border: 1px solid black;"></p>
+                    <div style = "width: 40%; margin-right: 40px; margin-left: 10px;">
+                        <h5>Explore</h5>
+                        <p> All feature</p>
+                        <p>Documentation</p>
+                        <p>GitHub Skills</p>
+                        <p>Blog</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "item">
+            <p style = "font-size: 18px;">Solutions</p>
+            <i class="fas fa-chevron-down small-ic" ></i>
+        </div>
+        <div class = "item">
+            <p style = "font-size: 18px;">Resources</p>
+            <i class="fas fa-chevron-down small-ic" ></i>
+        </div>
+        <div class = "item">
+            <p style = "font-size: 18px;">Open Source</p>
+            <i class="fas fa-chevron-down small-ic" ></i>
+        </div>
+        <div class = "item">
+            <p style = "font-size: 18px;">Enterprise</p>
+            <i class="fas fa-chevron-down small-ic" ></i>
+        </div>
+        <div class = "item">
+            <p style = "font-size: 18px;">Pricing</p>
+            <i class="fas fa-chevron-down small-ic" ></i>
+        </div>
+        <div style="margin-left: 150px; border-radius: 5px; border: 1px solid rgb(254, 251, 251); color: rgb(70, 69, 69);height:30px; width: 350px; padding: 15px 10px; display: flex; align-items: center;">
+            <i class="fas fa-search" style="color: rgb(107, 105, 105); font-size: 15px;"></i>
+            <span style="font-size: 17px; margin-left: 10px;">Search or jump to...</span>
+            <span style="font-size: 15px; width: 20px; border: 1px solid rgb(107, 105, 105); padding: 2px 2px; border-radius: 5px; text-align: center; margin-left: auto;">/</span>
+        </div>
+        <div class = "input">
+            <span>Sign in</span>
+        </div>
+        <div class = "input">
+            <sapn style = "border-radius: 5px; border: 1px solid white; height: 20px; width: max-content; padding: 15px 15px; display: flex;align-items: center;">Sign up</sapn>
+        </div>
+    </div>
+</body>
+</html>
