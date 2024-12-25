@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .ic{
+            position:absolute;
+            border-radius: 50%;
+            background-color: black;
+            left: 0px;
+            top: 0px;
+            width: 75px;
+            height: 75px;
+            animation-name: plays;
+            animation-duration: 4s;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+        }
+        @keyframes plays {
+            0%   {left: 0; top: 0;}                                 
+            25%  {left: calc(100% - 75px); top: 0;}                 
+            50%  {left: calc(100% - 75px); top: calc(100% - 100px);} 
+            75%  {left: 0; top: calc(100% - 100px);}                 
+            100% {left: 0; top: 0;}
+        }
+        
+        .ic2 {
+            position: absolute; 
+            top: 50%;
+            left: 50%;
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(150, 148, 148, 0.1);
+            border-top: 5px solid black;
+            border-radius: 50%;
+            animation-name: movation;
+            animation-duration: 2s;
+            animation-direction: normal;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes movation {
+            0% {
+                border-left-color: rgba(150, 148, 148, 0.1);
+                border-top-color: black;
+            }
+            25% {
+                border-top-color: rgba(150, 148, 148, 0.1);
+                border-right-color: black;
+            }
+            50% {
+                border-right-color: rgba(150, 148, 148, 0.1);
+                border-bottom-color:black;
+            }
+            75% {
+                border-bottom-color: rgba(150, 148, 148, 0.1);
+                border-left-color: black;
+            }
+            100% {
+                border-left-color: rgba(150, 148, 148, 0.1);
+                border-top-color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+        <p class = "ic"></p>
+        <p class = "ic2"></p>
+    
+</body>
+</html>
