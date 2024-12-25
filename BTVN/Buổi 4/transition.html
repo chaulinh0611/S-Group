@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            background-color: black;
+            position:absolute;
+            padding: 50px 50px;
+            font-family:'Raleway', Arial, sans-serif;
+        }
+        .container {
+            position: relative;
+            overflow: hidden;
+            opacity: 1;
+            width: 480px;
+            height: 360px;
+        }
+        .title{
+            color:rgb(71, 71, 69);
+            font-size: 25px;
+            padding: 30px 0;
+            margin: 0;
+        }
+
+        .img {
+            opacity: 0.5;
+            position: absolute;
+            width: 600px;
+            height: 360px;
+            left: -100px; 
+            transition: all 2s ease;
+        }
+
+        .content-box {
+            position: absolute;
+            z-index: 1;
+            bottom: 15%;
+            color: white;
+            padding: 0 20px;
+            transition: all 2s ease;
+        }
+        
+
+        .text {
+            color:beige;
+            margin: 0;
+            opacity: 0; 
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+            font-weight:100;
+            visibility: hidden;
+            transition: all 2s ease;
+        }
+        .container:hover .img {
+            opacity: 1;
+            left: 0;
+        }
+        .container:hover .text{
+            opacity: 1;
+            visibility: visible; 
+        }
+        .img2{
+            opacity: 1;
+        }
+        .content-box2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 17%;
+            color: white;
+            padding: 0 20px;
+            transition: all 2s ease;
+        }
+        .text2{
+            color:rgb(222, 222, 215);
+            opacity: 1; 
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+            font-weight:100;
+            visibility: hidden;
+            transition: all 2s ease;
+        }
+        .container:hover .img2 {
+            opacity: 0.5;
+          
+        }
+        .container:hover .content-box2 {
+            top: 20%;
+        }
+
+        .container:hover .text2 {
+            opacity: 0.6;
+            visibility: visible; 
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <h2 class = "title">Lily</h2>
+    <div class = "container">
+        <img class = "img" src = "https://tympanus.net/Development/HoverEffectIdeas/img/1.jpg"> 
+        <div class = "content-box">
+            <h2 style = "font-weight: 400;font-size: 25px; margin: 0; padding: 0;">
+            NICE
+            <b>LILY</b>
+        </h2>
+            <p class = "text">LILY LIKES TO PLAY WITH CRAYONS AND PENCILS</p>
+        </div>
+    </div>
+    <h2 class = "title">Sadie</h2>
+    <div class="container">
+        <img class = "img2" src="https://tympanus.net/Development/HoverEffectIdeas/img/14.jpg"> 
+        <div class="content-box2">
+            <h2 style="font-weight: 400; font-size: 25px; margin-bottom: 180px;">
+                HOLY
+                <b>SADIE</b>
+            </h2>
+            <p class="text2">SADIE NEVER TOOK HER EYES OFF ME.</p>
+            <p class="text2">SHE HAD A DARK SOUL.</p>
+        </div>
+    </div>
+</body>
+</html>
