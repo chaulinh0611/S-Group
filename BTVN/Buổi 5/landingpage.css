@@ -1,0 +1,578 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1b1b48;
+}
+
+.header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222222;
+    font-size:14px;
+}
+.title1 {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    border-radius: 20px;
+    padding: 7px 16px;
+    background-image: linear-gradient(90deg, #154284, #181733);
+    margin-left: 120px;
+    white-space: nowrap;
+}
+.title1_group1{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.title1_text1 {
+    font-weight: bold;
+    font-size: 13px;
+    color: white;
+    margin-right: 8px;
+}
+
+.title1_text2 {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    font-weight: bold;
+    font-size: 13px;
+    color: #fdc52c;
+}
+
+
+.it1 {
+    width: 12px;
+    height: 12px;
+    background-color: #5050b7;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.it2 {
+    width: 12px;
+    height: 12px;
+    background-color: red;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+
+.title2 {
+    display: flex;
+    align-items: center;
+}
+.log_in{
+    display: flex;
+    align-items: center;
+    margin: 0 24px 0 0;
+}
+.login {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;
+    text-align: center;
+}
+.login:hover{
+    text-decoration: underline;
+}
+.login_icon {
+    background-color: #154284;
+    color: white;
+    border: 1px solid #224e90;
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px 0 0;
+    height: 30px;
+    width: 30px;
+    font-size: 14px; 
+}
+.viewplans {
+    background-image: linear-gradient(to right, #8b1e1e, #e31c3d);
+    border-radius: 0.3rem;
+    height: 42px;
+    width: max-content;
+    margin: 0 8px 0 0;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    white-space:nowrap;
+    font-size: 14px;
+}
+.view-plans {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 14px;
+    width: 80px;
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.view-plans_icon{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 22px;
+    height: 22px;
+
+}
+.language{
+    font-size: 14px;
+    font-family: fcb-bold, Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 400;
+    align-items: center;
+    background-color: hsla(0, 0%, 100%, .12);
+    border-radius: 100%;
+    display: flex;
+    height: 36px;
+    width: 36px;
+    justify-content: center;
+    margin: 0 16px;
+    position: relative;
+    transition: background-color .3s ease-in;
+    color: white;
+}
+.language:hover{
+    background-color: #e31c3d;
+}
+.www{
+    font-size: 7px;
+    font-family: fcb-bold, Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 400;
+    align-items: center;
+    background-color: hsla(0, 0%, 100%, .12);
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 36px;
+    width: 36px;
+    justify-content: center;
+    margin: 0 24px 0 0;
+    position: relative;
+    transition: background-color .3s ease-in;
+    color: white;
+}
+.www_icon {
+    font-size: 14px;
+    color: white;
+}
+.www:hover{
+    background-color: #e31c3d;
+}
+.header2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #181733;
+    padding: 10px 40px;
+    height: 62px;
+}
+
+.logo_barcelona {
+    position:relative;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    width: 82px;
+    height: 82px;
+    margin-right: 40px;
+}
+.head2_2{
+    display: none;
+}
+.title3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 100px;
+}
+.title3_1{
+    display: flex;
+    align-items: center;
+    padding: 6px 8px;
+    font-size: 14px;
+    background-image: linear-gradient(to right, #8b1e1e, #e31c3d);
+    border-radius: 0.3rem;
+    color:#fff;
+    font-weight: 600;
+}
+.logo_login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    margin: 0 4px 0 0;
+    color: #fff;
+}
+.list1{
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.list1_1 {
+    font-family: fcb-condensed-bold, Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-weight:bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    height: 62px;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    padding: 0 20px;
+}
+.list1_1_border{
+    position:absolute;
+    border-bottom: 6px solid #fdc52c;
+    width: 100%;
+    height: 6px;
+    bottom: 0;
+}
+.list1_2{
+    font-family: fcb-condensed-bold, Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-weight:bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+    height: 62px;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    padding: 0 20px;
+}
+.title4{
+    display:flex;
+    align-items: center;
+    color: #fdc52c;
+}
+.title4_1{
+    margin: 0 12px;
+    align-items: center;
+    background-color: hsla(0, 0%, 100%, .12);
+    border-radius: 100%;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .25);
+    display: flex;
+    flex-direction: column;
+    height: 36px;
+    justify-content: center;
+    transition: background-color .3s ease-in;
+    width: 36px;
+}
+.menu-container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    height: 10px;
+}
+.menu{
+    height: 1px;
+    background: #fff;
+    border-radius: 1px;
+    width: 18px;  
+    border-top: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+    position: relative; 
+}
+.list2{
+    display:flex;
+    align-items: center;
+    padding: 0 16px;
+    font-size: 14px;
+    font-family: fcb-condensed-bold, Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-weight:700;
+}
+.list2_1{
+    margin: 0 6px 0 0; 
+}
+.list2_2{
+    position:relative;
+    bottom: 3px;
+    margin: 0 0 0 4px;
+}
+.list2_4{
+    margin: 0 6px 0 4px;
+}
+.list2_5{
+    position: relative;
+    bottom: 2px;
+    right: 5px;
+}
+.border{
+    border-left: 1px solid #FFFFFF1F;
+    width: 5px;
+    height: 23px;
+}
+.icon_search{
+    position: relative;
+    left: 10px;
+    color: white;
+    font-size: 23px;
+    padding: 0 9px 0 9px;
+}
+.header3{
+    height: 48px;
+    font-size: 14px;
+    font-family: fcb-condensed-bold, Arial, Helvetica Neue, Helvetica, sans-serif;
+    background: linear-gradient(to right, 
+        rgba(0, 0, 255, 0.621) 45%, 
+        #e31c3db7 55%,  
+        #e31c3db7 100%);
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+}
+.header3_group1{
+    margin-left: 136px;
+    height: 100%; 
+    display:flex;
+    justify-content: flex-start; 
+    flex-direction: row;
+}
+.title5 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    font-size: 14px;
+    color: white;
+    margin: 0 24px;
+    position: relative; 
+    height: 100%;
+}
+.title5_1{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    font-size: 14px;
+    color: white;
+    margin: 0 24px;
+    position: relative; 
+    height: 100%;
+}
+
+
+.title5_border {
+    position: absolute;
+    bottom: 0px;
+    left: -8px;
+    width: 60px;
+    border-bottom: 4px solid #fdc52c; 
+    height: 4px;
+}
+
+.title5:hover {
+    width:max-content;
+    border-bottom: 4px solid white; 
+}
+.header3_2{
+    display: none;
+    font-size: 14px;
+    color: black;
+    font-weight: 600;
+    margin: 0;
+}
+
+.title6{
+    display: none;
+}
+
+.header3_2{
+    display:none;
+}
+
+.header4{
+    display: none;
+    background: linear-gradient(to right, 
+        rgba(0, 0, 255, 0.621) 45%, 
+        #e31c3db7 55%,  
+        #e31c3db7 100%);
+    height: 4px;
+    width: 100%;
+}
+@media (max-width: 840px) {
+    .header1 {
+        justify-content: flex-start;
+        height: 45px;
+        padding-left: 10px; 
+    }
+    .title1 {
+        justify-content: flex-start;
+        flex-direction: column;
+        margin: 6px 8px; 
+        width:  100%; 
+    }
+    .title1_text2 {
+        font-size: 11px;
+    }
+    .title2 {
+        display: none;
+    }
+    .title1_text1{
+        font-size: 11px;
+    }
+    .title1_text2{
+        font-size: 11px;
+    }
+    .header2{
+        justify-content: space-between;
+        height: 60px;
+        padding: 0 0;
+    }
+    .logo_barcelona{
+        position: relative;
+        left: 10px;
+        width: 60px;
+        height: 60px;
+        margin: 0;
+        padding: 0;
+        bottom: -5px;
+    }
+    .head2_2{
+        display:flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .title3_1{
+        display:flex;
+        justify-content: flex-end;
+    }
+    .title3{
+        display: none;
+    }
+    .title4{
+        display: none;
+    }
+    .title4_1{
+        display:flex;
+    }
+    .header3{
+        height: 72px;
+        background: #fff;
+    }
+    .header3_group1{
+        display: none;
+    }
+    .header3_2{
+        width:100%;
+        display:flex;
+        background-color: white;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        z-index:110;
+        padding:10px;
+        margin-bottom: 5px;
+    }
+    .title6{
+        font-weight: 600;
+        color:#0a0927;
+        background-color: white;
+        display:flex;
+        flex-direction: column;
+        z-index:111px;
+        border-style: solid;
+        border:none;
+        width: 80px;
+        height: 40px;
+        text-decoration: none;
+        align-items: center;
+        padding-left: 7px;
+        padding-right: 7px;
+        font-size: 14px;
+        white-space: nowrap;
+        font-stretch: condensed;
+    }
+    .title5{
+        display: none;
+    }
+    .title5_1{
+        display: none;
+    }
+    .header4{
+        display: flex;
+    }
+}
+@media (min-width:840px) and (max-width:1024px){
+    .language{
+        padding: 0 8px;
+        width: 35px;
+    }
+    .title1{
+        margin-left: 100px;
+    }
+    .log_in{
+        font-size: 12px;
+    }
+    .view-plans_icon{
+        width: 17px;
+        height: 17px;
+    }
+    .view-plans{
+        white-space: normal;
+        width: 100%;
+        text-align: center;
+    }
+    .list1_1{
+        font-size: 12px;
+    }
+    .list1_2{
+        font-size: 12px;
+    }
+    .header2{
+        padding: 0 0;
+    }
+    .logo_barcelona{
+        width: 60px;
+        height: 60px;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+    .list2_1{
+        width: 19px;
+        height: 16px;
+    }
+    .list2_2{
+        left: -10px;
+    }
+    .title3{
+        width: 43%;
+        margin-right: 20px;
+    }
+    .list2{
+        font-size: 12px;
+    }
+    .icon_search{
+        font-size: 21px;
+        padding: 0 20px;
+        left: 0px;
+    }
+    .title5{
+        font-size: 12px;
+        margin: 0 20px;
+    }
+    .title5_1{
+        font-size: 12px;
+        margin: 0 20px;
+    }
+}
