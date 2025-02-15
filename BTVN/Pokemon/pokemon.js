@@ -3598,11 +3598,22 @@ const data =
             }
         ]
 }
-async function displayPokemon() {
-    const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=50");
+let allPokemon = [];  
+let pokemonToDisplay = [];
+let pokemonDisplayed = []; 
+let pokemonCount = 36;
+
+const fetchAllData = async function() {
+    const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=898");  
     const data = await response.json();
-    display(data.results); 
-}
+    allPokemon = data.results;
+
+    pokemonToDisplay = allPokemon.slice(0, pokemonCount);  
+    pokemonDisplayed = [...pokemonToDisplay];
+   
+
+    display(pokemonToDisplay);
+};
 
 async function display(pokemonSet) {  
     const container = document.querySelector(".main-content");  
@@ -3630,4 +3641,36 @@ async function display(pokemonSet) {
     }
 }
 
-displayPokemon();
+document.getElementById("search-input").addEventListener("input", function() {
+    const pokemonSearch = this.value.toLowerCase();
+    const noresult_content = document.querySelector(".no-result");
+
+    if (pokemonSearch !== "") {
+        const pokemonToSearched = allPokemon.filter(pokemon => 
+            pokemon.name.toLowerCase().includes(pokemonSearch)
+        );
+        if (pokemonToSearched.length !== 0) {
+            display(pokemonToSearched);
+            resultContainer.style.display = "none"; 
+        } else {
+            document.querySelector(".main-content").innerHTML = ""; 
+            noresult_content.innerHTML = `No Pokémon matched with <span style = "font-weight: bold">"${this.value}"</span>`;
+            noresult_content.style.display = "block"; 
+        }
+    }else {
+        display(pokemonToDisplay);
+        noresult_content.style.display = "none"; 
+    }
+});
+
+
+document.querySelector(".load_button").addEventListener("click", function() {
+    pokemonCount *= 2;  
+    pokemonToDisplay = allPokemon.slice(0, pokemonCount);
+    display(pokemonToDisplay);
+});
+
+fetchAllData();
+
+
+
