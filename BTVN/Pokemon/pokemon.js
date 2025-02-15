@@ -3659,6 +3659,7 @@ document.getElementById("search-input").addEventListener("input", function() {
             noresult_content.style.display = "block"; 
         }
     }else {
+        loadMoreButton.style.display = "block";
         display(pokemonToDisplay);
         noresult_content.style.display = "none"; 
     }
