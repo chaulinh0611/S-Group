@@ -535,6 +535,7 @@ body {
     position: relative;
     height: 68.2px;
     transition: background-color 0.3s ease; 
+    text-decoration: none;
 }
 .icon_search {
     position: relative;
