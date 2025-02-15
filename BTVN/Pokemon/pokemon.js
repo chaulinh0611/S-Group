@@ -3644,12 +3644,13 @@ async function display(pokemonSet) {
 document.getElementById("search-input").addEventListener("input", function() {
     const pokemonSearch = this.value.toLowerCase();
     const noresult_content = document.querySelector(".no-result");
-
+    const loadMoreButton = document.querySelector(".load_button");
     if (pokemonSearch !== "") {
         const pokemonToSearched = allPokemon.filter(pokemon => 
             pokemon.name.toLowerCase().includes(pokemonSearch)
         );
         if (pokemonToSearched.length !== 0) {
+            loadMoreButton.style.display = "none";
             display(pokemonToSearched);
             resultContainer.style.display = "none"; 
         } else {
