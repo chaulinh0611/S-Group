@@ -1819,7 +1819,9 @@ body {
     }
     .infor_footballer{
         padding: 0;
+        width: 100%;
     }
+
     .infor_coach{
         padding: 0;
         width: 100%;
