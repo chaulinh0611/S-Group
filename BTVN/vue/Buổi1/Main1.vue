@@ -74,89 +74,89 @@ function clickBookmark() {
             <h3>Hoạt động của v-model</h3>
             <p>v-model là một syntax sugar (cú pháp ngọt - dễ nhìn) để viết v-on và v-bind với nhau trong một dòng. Tổng quan, hai dòng sau thực hiện cùng một hoạt động:</p>
             <div class="code">
-                &lt;input v-model="searchText"&gt;<br>
-                &lt;input :value="searchText" @change="searchText = $event.target.value"&gt;
+&lt;input v-model="searchText"&gt;
+&lt;input :value="searchText" @change="searchText = $event.target.value"&gt;
             </div>
             <p style = "margin-top: 27px;">Thành phần tùy chỉnh của v-model Trường hợp sử dụng v-model đối với thành phần tùy chỉnh, mặc định thì props được gọi là value và sự kiện của input được sử dụng. Value này có thể thay đổi được bằng định nghĩa ở phía thành phần tùy chỉnh.</p>
             <p style = "margin-top: 27px;">Ví dụng sau được trích từ trang tài liệu tham khảo chính thức:</p>
             <div class="code">
-                Vue.component('my-checkbox', {<br>
-                model: {<br>
-                    prop: 'checked',<br>
-                    event: 'change'<br>
-                },<br>
-                props: {<br>
-                    // Tùy theo điều này,  cho phép sử dụng thuộc tính `value` với mục đích riêng biệt.<br>
-                    value: String,<br>
-                    // `checked` sẽ được sử dụng như thuộc tính thay thế `value`<br>
-                    checked: {<br>
-                    type: Number,<br>
-                    default: 0<br>
-                    }<br>
-                },<br>
-                // ...<br>
-                })
+Vue.component('my-checkbox', {
+model: {
+    prop: 'checked',
+    event: 'change'
+},
+props: {
+    // Tùy theo điều này,  cho phép sử dụng thuộc tính `value` với mục đích riêng biệt.
+    value: String,
+    // `checked` sẽ được sử dụng như thuộc tính thay thế `value`
+    checked: {
+    type: Number,
+    default: 0
+    }
+},
+// ...
+})
             </div>
             <div class = "content">
                 <h3>Những lỗi thường gặp</h3>
                 <p>Viêt cả v-model và @change V-model như đã nói ở trên là Event handling (xử lý sự kiện). Nên việc kết hợp viết hai lần sử dụng v-model và @change là không cần thiết, và làm cho code trở nên Not Syntax Suger. Ví dụ như đoạn mã ở dưới.</p>
                 <p style = "margin-top: 27px;">// Đoạn code lỗi</p>
                 <div class = "code">
-                    <!-- <input v-model="searchText" @change="(value) => searchText = value"> -->
+&lt;input v-model=&quot;searchText&quot; @change=&quot;(value) =&gt; searchText = value&quot;&gt;
                 </div>
                 <p style = "margin-top: 27px;">Do bản thân v-model đã có sẵn Event handling (xử lý sự kiện) của sự kiện @change, nên sự kiện đối với change bị lặp lại hai lần. Nếu trường hợp muốn xử lý nhiều sự kiện hơn một sự kiện change, chúng ta nên dùng việc sử dụng v-model và thay thế vào đó là sử dụng đồng thời v-bind và v-on hoặc sử dụng thuộc tính thay thế searchText.</p>
                 <p style = "margin-top: 27px;">// Đoạn code chuẩn Syntax Suger</p>
                 <div class = "code">
-                    <!-- <input v-model="searchText"><br>
-                    <script><br>
-                    data(){<br>
-                    return {<br>
-                        innerSearchText: ''<br>
-                    },<br>
-                    },<br>
-                    computed: {<br>
-                    searchText: {<br>
-                        get () {<br>
-                        return this.innerSearchText<br>
-                        },<br>
-                        set (value) {<br>
-                        this.innerSearchText = value<br>
-                        }<br>
-                    }<br>
-                    }
-                     -->
+&lt;input v-model=&quot;searchText&quot;&gt;
+&lt;script&gt
+data() {
+    return {
+        innerSearchText: &#39;&#39;
+    },
+},
+computed: {
+    searchText: {
+        get () {
+            return this.innerSearchText
+        }
+        set (value) {
+            this.innerSearchText = value&lt
+        }&lt
+    }&lt
+}
                 </div>
                 <p style  = "margin-top: 27px;">Sự kết hợp giữa v-model và set tạo động lực phát triển cho trường hợp kết hợp với Vuex với nhiều nội dung khác.</p>
                 <p style = "margin-top: 27px;">Truyền nguyên props cho v-model Đối với biến v-model, trường hợp muốn làm cầu nói với props thì mình thấy rất nhiều. Nhưng nếu sử dụng điều này, lỗi cảnh báo sẽ được hiển thị vì props bị thay đổi trực tiếp.
                 <br> // Đoạn mã lỗi</p>
                 <div class = "code">
-                    <!-- <input v-model="searchText"> # Cảnh báo sẽ được hiển thị vì v-model thực thi searchText = $event.taget.value
-                    <script>
-                    props: {
-                        searchText: String
-                    }
-                    </script> -->
+&lt;input v-model=&quot;searchText&quot;&gt; 
+&lt;!-- Cảnh báo sẽ được hiển thị vì v-model thực thi searchText = $event.target.value --&gt;
+&lt;script&gt;
+props: {
+    searchText: String
+}
+&lt;/script&gt;
                 </div>
                 <p style = "margin-top: 27px;">Đoạn mã này nhìn thì thấy có vẻ như hoạt động đúng. Nhưng trên thực tế, sau khi giá trị của props được khởi tạo thì giá trị giữa props và data sẽ không được đồng bộ. Cho nên, dù đã sử thành đoạn mã mới, nhưng việc sửa chữa vẫn không được thực thi đúng.
                     <br><br>Vậy thì làm thế nào để có thể tránh nó? Bằng cách sử dụng các thuộc tính được tính toán thì có thể khắc phục được..
                 <br> Đoạn code chuẩn Syntax Suger</p>
                 <div class = "code">
-                    <!-- <input v-model="innerSearchText">
-                    <script>
-                    props: {
-                        searchText: String
-                    },
-                    computed: {
-                        innerSearchText: {
-                        get () {
-                            return this.$props.searchText
-                        },
-                        set (value) {
-                            this.$emit('change', value)
-                        }
-                        }
-                    }
-                    </script> -->
+&lt;input v-model=&quot;innerSearchText&quot;&gt;
+&lt;script&gt;
+props: {
+    searchText: String
+},
+computed: {
+    innerSearchText: {
+        get () {
+            return this.$props.searchText;
+        },
+        set (value) {
+            this.$emit(&#39;change&#39;, value);
+        }
+    }
+}
+&lt;/script&gt;
                 </div>
             </div>
             <div class="content">
@@ -334,7 +334,7 @@ h1 {
 }
 .code{
     margin: 15px 0;
-    padding: 15px;
+    padding: 0 15px;
     background-color: #f1f2f3;
     border: 1px solid #e5e5e5;
     color: #24292e;
@@ -345,11 +345,6 @@ h1 {
     word-spacing: normal;
     word-break: normal;
     line-height: 1.45;
-    -moz-tab-size: 4;
-    tab-size: 4;
-    -webkit-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
 }
   
 .sidebar-right {
