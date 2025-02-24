@@ -85,7 +85,7 @@ async function fetchData() {
         return response.json();
         // dataList.value.push(data);
     });
-    //đợi để lấy đủ tất cả dữ liệuliệu
+    //đợi để lấy đủ tất cả dữ liệu
     const allData = await Promise.all(waitData);
     dataList.value.push(...allData);
 }
@@ -180,7 +180,7 @@ onMounted(() =>{
 .container{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content:flex-start;
     flex-wrap: wrap;
 }
 .load{
